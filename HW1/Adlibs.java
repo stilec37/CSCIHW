@@ -11,16 +11,7 @@ public class Adlibs
 {
     public  String story(String name, int age, String favoriteColor) 
     {
-        
-        
-        // String Name = "Cailyn";
-        //Adlibs Name = new Adlibs();
-        //int Age = 18;
-        // Adlibs Age = new Adlibs();
-        //String FavoriteColor = "pink";
-        
-
-        
         return "Hello! My name is " + name + ", I am " + age + " years old, and my favorite color is " + favoriteColor;
+        // String concatenation is used to return all of the parameters of the strings in one line of code
     }
 }

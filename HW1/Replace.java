@@ -8,22 +8,12 @@ package HW1;
 // 01234
 public class Replace 
 {
-    public String charReplace(String s, int x, char z)//s, x, z
+    public String charReplace(String s, int x, char z)
     {
-
-        // String s1 = "Cailyn";
-        //System.out.println(s);
-        //System.out.println(s.substring(0,x));
         String answer = s.substring(0,x)+z+s.substring(x+1);
-        //System.out.println(s1.substring(3));
-        // you need 2 substrings s.substring
-        //System.out.println(s1.replace("l", "n"));
+        // 2 substrings are needed
+        // Use of string concatenation
+        // The first substring accounts for the first part of the String parameter, and the second substring accounts for the second half after the given integer
         return answer;
-        
-        //x = 3;
-        //s = "Cailyn";
-        //z = 'n';
-
     }
-    
 }

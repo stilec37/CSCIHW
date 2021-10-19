@@ -17,7 +17,6 @@ public class Pyramid
 {
     public static void Output() 
     {
-       
         System.out.println("#");
         System.out.println("##");
         System.out.println("###");
@@ -27,6 +26,6 @@ public class Pyramid
         System.out.println("###");
         System.out.println("##");
         System.out.println("#");
-
+        // The System.out.println() is a method and the parameters placed inside of the parentheses of this method are what is printed out in the terminal
     }
 }
