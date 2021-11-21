@@ -17,16 +17,40 @@ public class Loops {
     //eeeeat -> false
 
     public static boolean loopE(String str){
-        return true; // <- this should be changed 
+        // created a counter variable
+        int counter = 0;
+        // created a for loop
+        // i starts at 0 (the first index) and goes to the end of the string in increments of 1
+        for(int i = 0; i<str.length(); i++)
+        {
+            // checks every index of the string to see if it contains an e
+            if(str.charAt(i) == 'e')
+            {
+                counter ++;
+            }
+        } 
+        // if there are between 1 and 3 e characters, then it will return true
+        if(counter>0 && counter<=3){
+            return true;
+        } else{
+            return false;
+        }     
     }
-
+      
     //Given a String str and int n return a larger string
     //that is n copies of the original string 
     //Ex.
     //stringTimes("Code",2) ->"CodeCode"
     //stringTimes("Code",4) ->"CodeCodeCodeCode"
     public static String stringTimes(String str, int n) {
-        return null; // <- this should be changed 
+        // created a variable called result
+        String result = "";
+        // created a for loop that starts at i = 0, and runs if the index is less than int n, and runs in increments of 1
+        for(int i=0; i<n; i++){
+            // result oututs the string a number of n times
+            result = result + str;
+        }
+        return result; 
     } 
 
     //Create a method Given a string, return the string where all of the "z"
@@ -37,7 +61,22 @@ public class Loops {
     //stringT("nozthaznks") -> "nothanks"
     //stringT("xksiazdjaasldzsajzasdz") -> "xksiadjaasldsajasdz"
     public static String stringZ(String str){
-        return null; // <- this should be changed 
+        String result = "";
+        // [1,2,3,4]
+        // index Length 4
+        // indices length 3
+        // [0,1,2,3]
+        for(int i=0; i<str.length(); i++){
+            // check for first and last index
+            // then reverse to check for everything BUT first and last index
+            // then check if index is equal to z
+            // !() this means everything but what's inside the parentheses
+            if (!(i > 0 && i < (str.length()-1) && str.substring(i, i+1).equals("z"))){
+                // result is every character but z
+                result = result + str.charAt(i);
+            }
+        }
+        return result; 
     }
 
     //Create a method that contains a while loop that allows for
@@ -66,11 +105,30 @@ public class Loops {
     // Number: 0
     // TOTAL ENDED --- The total is 27.
     public static void sums(){
+        // initiated Scanner
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("I will add up the numbers you give me....");
+        // created number variable which is inputted by Scanner
+        int number = keyboard.nextInt();
+        // created total variable which is used to sum up the numbers given
+        int total = 0;
+        // created a while loop that runs if the number inputted is not equal to 0
+        while(number!=0){
+            // the total variable calculates the sum
+            total = total + number;
+            System.out.println("The total so far is " +total);
+            number = keyboard.nextInt();
+            System.out.println("Number: " +number);
+        }
+            // this next line is outputted if the number inputted is 0
+            System.out.println("TOTAL ENDED --- The total is " +total);
     }
 
     public static void main(String[] args) {
         // Add code to help test your methods here
-
+        System.out.println(loopE("hllo"));
+        System.out.println(stringTimes("Hello", 3));
+        System.out.println(stringZ("zhezoz"));
+        sums();
     }
-    
 }
